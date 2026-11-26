@@ -122,7 +122,7 @@ export default function PrintOperacional() {
 
       <div className="operacional-card">
         <form onSubmit={handleImprimir}>
-          <div className="form-group-large">
+          <div className="form-group-large" data-tour="print-select-template">
             <label>Modelo de Etiqueta</label>
             <select 
               className="large-input"
@@ -138,7 +138,7 @@ export default function PrintOperacional() {
           </div>
 
           {/* 2. Formulário Dinâmico baseado no Banco de Dados */}
-          <div className="dynamic-inputs-area">
+          <div className="dynamic-inputs-area" data-tour="print-dynamic-inputs">
             {camposDinamicos.map(campo => (
               <div className="form-group-large" key={campo.id}>
                 <label>{campo.label_exibicao}</label>

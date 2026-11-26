@@ -29,10 +29,10 @@ export default function ConexoesAdmin() {
     <div className="admin-container">
       <div className="admin-header">
         <h1>Conexões de Banco de Dados (ERPs)</h1>
-        <button className="btn-primary" onClick={() => setShowModal(true)}>+ Nova Conexão</button>
+        <button className="btn-primary" data-tour="conexoes-new-btn" onClick={() => setShowModal(true)}>+ Nova Conexão</button>
       </div>
 
-      <table className="admin-table">
+      <table className="admin-table" data-tour="conexoes-table">
         <thead>
           <tr>
             <th>Nome</th>

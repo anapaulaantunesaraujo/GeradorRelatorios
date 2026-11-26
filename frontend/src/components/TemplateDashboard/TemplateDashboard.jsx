@@ -42,10 +42,10 @@ export default function TemplateDashboard() {
     <div className="admin-container">
       <div className="admin-header">
         <h1>Modelos de Etiqueta (Dashboards)</h1>
-        <button className="btn-primary" onClick={() => navigate('/editor')}>+ Novo Modelo</button>
+        <button className="btn-primary" data-tour="dashboard-new-template" onClick={() => navigate('/editor')}>+ Novo Modelo</button>
       </div>
 
-      <table className="admin-table">
+      <table className="admin-table" data-tour="dashboard-table">
         <thead>
           <tr>
             <th>ID</th>

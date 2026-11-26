@@ -151,13 +151,13 @@ export default function TemplateEditor() {
     <div className="editor-container">
       <header className="editor-header">
         <h1>Criar Modelo de Etiqueta (Zebra)</h1>
-        <button className="btn-primary" onClick={handleSalvarModelo}>Salvar Modelo</button>
+        <button className="btn-primary" data-tour="editor-save-btn" onClick={handleSalvarModelo}>Salvar Modelo</button>
       </header>
 
       <div className="editor-layout">
         {/* COLUNA ESQUERDA: Configurações e Tools */}
         <aside className="editor-sidebar-left">
-          <section className="config-section">
+          <section className="config-section" data-tour="editor-config-geral">
             <h2>1. Configuração Geral</h2>
             <div className="form-group">
               <label>Nome do Template</label>
@@ -233,7 +233,7 @@ export default function TemplateEditor() {
             </div>
           </section>
 
-          <section className="inputs-section">
+          <section className="inputs-section" data-tour="editor-inputs-section">
             <h2>2. Inputs do Usuário</h2>
             <button className="btn-secondary add-filter-btn" onClick={adicionarFiltro}>
               + Adicionar Filtro
@@ -259,7 +259,7 @@ export default function TemplateEditor() {
             </div>
           </section>
 
-          <section className="tools-section">
+          <section className="tools-section" data-tour="editor-ia-section">
             <h2>✨ Inteligência Artificial</h2>
             <div className="ia-upload-box">
               <label className="btn-ia-upload">
@@ -275,7 +275,7 @@ export default function TemplateEditor() {
             </div>
           </section>
 
-          <section className="tools-section">
+          <section className="tools-section" data-tour="editor-tools-section">
             <h2>Ferramentas (Arraste)</h2>
             <div className="tools-grid">
               <div 
@@ -304,7 +304,7 @@ export default function TemplateEditor() {
         </aside>
 
         {/* CENTRO: Canvas da Etiqueta */}
-        <main className="editor-main-canvas">
+        <main className="editor-main-canvas" data-tour="editor-canvas">
           <h2>3. Canvas da Etiqueta ({configFisica.largura}cm x {configFisica.altura}cm)</h2>
           <div className="canvas-wrapper">
             <div 
@@ -361,7 +361,7 @@ export default function TemplateEditor() {
         </main>
 
         {/* COLUNA DIREITA: Painel de Propriedades */}
-        <aside className="editor-sidebar-right">
+        <aside className="editor-sidebar-right" data-tour="editor-properties">
           <h2>Propriedades</h2>
           {!elementoAtivo ? (
             <p className="empty-state">Selecione um elemento no canvas para editar.</p>
